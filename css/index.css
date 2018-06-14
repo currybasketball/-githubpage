@@ -1,6 +1,13 @@
 /* html */
 html{
 	font-size: 14px;
+	min-width: 320px;
+}
+.fr{
+	float: right;
+}
+.fl:{
+	float: left;
 }
 /* 导航 */
 nav.navbar{
@@ -245,14 +252,47 @@ nav.navbar{
 	display: flex;
 	justify-content: center;
 	/*align-items: center;*/
-	
+	/*position: relative;*/
+	text-align: center;
+	margin:0 auto;
 
 }
 
 .screen03 .third-title{
-	flex: 1;
+	width: 100%;
+	/*flex: 1;*/
+	position: absolute;
+	text-align: center;
+	margin:0 auto;
+	top:7.5rem;
+	font-size:40px;
+	margin:0 auto;
 }
-
+@media (max-width: 530px){
+	.screen03 .third-title{
+		font-size:30px;
+	}
+}
+@media (max-width: 400px){
+	.screen03 .third-title .third-title-st{
+		display: none;
+	}
+}
 .screen03 .third-content{
-	flex: 1;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	margin:12rem auto;
+
 }
+.screen03 .third-content .third-content-left{
+	flex: 1;
+	position: absolute;
+	/*width: 50%;*/
+}
+/*.screen03 .third-content .third-content-left img{
+	width: 100%;
+}
+.screen03 .third-content .third-content-right{
+	flex: 1;
+}*/
