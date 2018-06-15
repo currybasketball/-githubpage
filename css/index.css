@@ -692,23 +692,53 @@ nav.navbar {
 	text-align: center;
 	color: #fff;
 	width: 100vw;
+	position: relative;
 }
 embed{
-	width:2rem;
+	width:1.5rem;
 	color: #fff;
+}
+.screen07  .partner{
+	position: absolute;
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	color: #fff;
+	border-radius: 3rem;
+}
+.screen07  .partner ul{
+	/*display: inline-block;*/
+	
+	width: 100%;
+	height: 5rem;
+}
+.screen07  .partner ul li{
+	z-index: 9999;
+	float: left;
+	text-align: center;
+	width: 25%;
+	margin:2rem;
 }
 .screen07 .seven-footer .seven-footer-top{
 	flex:9;
 	background-color: #444A56;
 	width: 100%;
 	height: 100%;
-	
+	z-index: -1;
+	padding-top: 18rem;
 }
+
+.screen07 .seven-footer .seven-footer-top a{
+	padding: 0 2rem;
+	font-size:1.5rem;
+}
+
 .screen07 .seven-footer .seven-footer-top span{
 	display: inline-block;
 	text-align: center;
 	line-height: 2rem;
 	height: 2rem;
+	font-size:1.1rem;
 }
 .screen07 .seven-footer .seven-footer-bottom{
 	flex:2;
