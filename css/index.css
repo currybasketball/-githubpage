@@ -9,11 +9,14 @@ html{
 .fl:{
 	float: left;
 }
+i{
+	font-style: normal;
+}
 /* 导航 */
 nav.navbar{
 	z-index: 9999;
 	opacity: 0.7!important;
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -96,16 +99,26 @@ nav.navbar{
     padding: 0 1rem;
     text-align: center;
     margin:auto;
+    transition: all 0.5s;
 }
 
+.screen01 .page-content .showcode:hover{
+	box-shadow: 5px 5px 5px 5px #333;
+            transform: translateY(-5px);
+}
 .screen01 .page-content .xkb-code{
 	width: 16rem;
 	/*position: relative;
 	left: 50%;*/
 	margin:auto;
 	margin-top: 3rem;
+	transition: all 0.5s;
 }
 
+.screen01 .page-content .xkb-code:hover{
+	box-shadow: 5px 5px 10px 10px #333;
+            transform: translateY(-10px);
+}
 .arrow-down-box{
 	position: absolute;
 	bottom:0;
@@ -163,7 +176,7 @@ nav.navbar{
 	font-weight:900;
 	color: #ccc;
 	font-size:1.5rem;
-	margin-left:3rem;
+	margin-left:2rem;3rem;
 }
 
 .second-left h4{
@@ -173,10 +186,10 @@ nav.navbar{
 }
 
 .second-left .h4-1{
-	margin-left: 1rem;
+	margin-left:2rem; 1rem;
 }
 .second-left .h4-2{
-	margin-left: 4rem;
+	margin-left:2rem; 4rem;
 }
 .screen02 .second-right{
 	width: 19rem;
@@ -202,7 +215,7 @@ nav.navbar{
 }
 .now .xkb-img-fir{
 	background-image: url('../images/hello.png');
-	margin-left: 1rem!important;
+	margin-left:2rem; 1rem!important;
 	transform-origin: left top;
 	/*transform: scale(0);*/
 	opacity: 0;
@@ -211,7 +224,7 @@ nav.navbar{
 .now .xkb-img-sec{
 	background-image: url('../images/help.png');
 	/*align-self: flex-end;*/
-	margin-left: 0!important;
+	margin-left:2rem; 0!important;
 	transform-origin: left top;
 	opacity: 0;
 	animation: screen-show 2s ease-in-out 1s forwards;
@@ -219,7 +232,7 @@ nav.navbar{
 }
 .now .xkb-img-trd{
 	background-image: url('../images/service.png');
-	margin-left: 1rem!important;
+	margin-left:2rem; 1rem!important;
 	transform-origin: left top;
 	opacity: 0;
 	animation: screen-show 2s ease-in-out 2s forwards;
@@ -227,7 +240,7 @@ nav.navbar{
 }
 .now .xkb-img-fth{
 	background-image: url('../images/please.png');
-	margin-left: 0!important;
+	margin-left:2rem; 0!important;
 	transform-origin: left top;
 	opacity: 0;
 	animation: screen-show 2s ease-in-out 3s forwards;
@@ -247,28 +260,29 @@ nav.navbar{
 
 /* 第三屏幕 */
 .screen03 {
-	background: linear-gradient(#3b94f5,#48cefa);
+	background: #335C92;
 	color: #fff;
 	display: flex;
 	justify-content: center;
-	/*align-items: center;*/
-	/*position: relative;*/
-	text-align: center;
-	margin:0 auto;
-
+	align-items: center;
+	flex-direction: column;
 }
-
 .screen03 .third-title{
 	width: 100%;
-	/*flex: 1;*/
-	position: absolute;
-	text-align: center;
-	margin:0 auto;
-	top:7.5rem;
+	flex: 2;
+	/*text-align: center;*/
+	/*align-self: flex-end;*/
 	font-size:40px;
 	margin:0 auto;
+	position: relative;
 }
-@media (max-width: 530px){
+.screen03 .third-title span{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+@media (max-width: 542px){
 	.screen03 .third-title{
 		font-size:30px;
 	}
@@ -279,20 +293,52 @@ nav.navbar{
 	}
 }
 .screen03 .third-content{
-	width: 100%;
+	/*width: 100%;
 	position: absolute;
 	text-align: center;
-	margin:12rem auto;
-
+	margin:12rem auto;*/
+	width: 100%;
+	flex: 7;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
 }
 .screen03 .third-content .third-content-left{
 	flex: 1;
-	position: absolute;
+	/*position: absolute;*/
 	/*width: 50%;*/
 }
-/*.screen03 .third-content .third-content-left img{
-	width: 100%;
+
+.screen03 .third-content .third-content-left img{
+	transition: all 0.5s;
+}
+.screen03 .third-content .third-content-left img:hover{
+	box-shadow: 5px 5px 5px 5px #333;
+            transform: translateY(-5px);
+	
 }
 .screen03 .third-content .third-content-right{
 	flex: 1;
-}*/
+	height: 16rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.screen03 .third-content .third-content-right div{
+	
+}
+.screen03 .third-content .third-content-right img{
+	margin-top:2rem;
+
+	display: block;
+	flex:1;
+}
+
+.screen03 .third-content .third-content-right .third-img-2{
+	align-self: flex-start;
+}
+
+/* 第四屏幕 */
