@@ -23,7 +23,7 @@ i {
 
 nav.navbar {
     z-index: 9999;
-    opacity: 0.7!important;
+    /*opacity: 0.7!important;*/
     /*position: fixed;*/
     width: 100%;
     top: 0;
