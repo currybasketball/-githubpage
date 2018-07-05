@@ -8,17 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="百度时候显示的介绍词语">
     <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
     <div>
-        <div id="FloatLayer"></div>
         <div id="wrap">
             <header class="header">
                 <div class="container">
@@ -26,10 +23,10 @@
                         <!--<img id="fordudu" src="https://om0i8pzmk.qnssl.com/images2/logo2.png?1529574073216">-->
                         <div class="col-md-2 logo">
                             <a href="http://www.xkins.cn">
-	          					<span class="logoSpan">
-	            					<img class="img-responsive" id="logoPic" src="images/logo.png">
-	         					</span>
-        					</a>
+                                <span class="logoSpan">
+                                    <img class="img-responsive" id="logoPic" src="images/logo.png">
+                                </span>
+                            </a>
                             <div class="Mobilemenu"><i class="glyphicon glyphicon-menu-hamburger"></i></div>
                         </div>
                         <div class="col-md-10  left mobilecolmd8 ">
@@ -56,6 +53,8 @@
                             </div>
                         </div>
                     </div>
+                    <!-- particles.js container -->
+                    <div id="particles-js"></div>
                 </div>
                 <div class="value">
                     <div class="container">
@@ -64,13 +63,12 @@
                             <div class="contentParent">
                                 <div class="col-md-6">
                                     <div class="xkb-con">
-	                                    <ul class="list-group">
+                                        <ul class="list-group">
                                             <a class="list-group-item"><img src="images/2-1.png"><span>营销引流</span></a>
                                             <a class="list-group-item"><img src="images/2-2.png"><span>智能保险顾问</span></a>
                                             <a class="list-group-item"><img src="images/2-3.png"><span>人机交互投保</span></a>
                                             <a class="list-group-item"><img src="images/2-4.png"><span>图像/语音/大数据风控</span></a>
                                             <a class="list-group-item"><img src="images/2-5.png"><span>大数据建模</span></a>
-	                                   
                                         </ul>
                                     </div>
                                 </div>
@@ -173,6 +171,33 @@
                 </div>
             </div>
         </div>
+        <!-- scripts -->
+        <script src="particles.js"></script>
+        <script src="js/app.js"></script>
+        <!-- stats.js -->
+        <script src="js/lib/stats.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+        </script>
 </body>
 
 </html>

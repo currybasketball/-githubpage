@@ -493,8 +493,8 @@ div#backtop a{
     display: inline-block;
     opacity: 0;
 }
-#FloatLayer{
-display: none;
+.value,.partner{
+    background-color: #fff;
 }
 .value .col-md-4{
     margin-top: 0!important;
@@ -533,4 +533,11 @@ display: none;
             to{
                 transform: perspective(600px) rotateX(180deg) ;
             }
+        }
+
+        #particles-js{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
         }
