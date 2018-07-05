@@ -473,26 +473,7 @@ img#fordudu {
     font-size: 16px;
     font-weight: 100;
 }
-div#backtop {
-    position: fixed;
-    background-image: url(https://om0i8pzmk.qnssl.com/images2/Backtop.png);
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-div#backtop:hover{
-    background-image: url(https://om0i8pzmk.qnssl.com/images2/Backtop2.png);
-}
-div#backtop a{
-    width: 60px;
-    height:60px;
-    display: inline-block;
-    opacity: 0;
-}
+
 .value,.partner{
     background-color: #fff;
 }
