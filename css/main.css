@@ -627,6 +627,7 @@ img#fordudu {
 
 #particles-js {
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     z-index: 0;
@@ -635,3 +636,4 @@ img#fordudu {
 img {
     vertical-align: middle;
 }
+
