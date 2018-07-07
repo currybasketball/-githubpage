@@ -38,7 +38,22 @@ img#fordudu {
     box-shadow: 2px 5px 20px #aaaaaa;
 }
 
+a:hover{
+    text-decoration: none;
+    transform: translateX(10px);
+    color: #eee;
+    transition: all 1s;
+}
 
+.partner_content img:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+
+}
+
+.anchor-fix{
+    margin-top: 85px;
+}
 /*.header img:hover{*/
 
 
