@@ -315,17 +315,21 @@
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
        <script type="text/javascript">
-        function hidebanner() {
-        $("#xkb_banner").removeClass("mobilecolmd8show")
-        }
-        $('#myModal').on('shown.bs.modal', function () {
-            $("#tan_video1").load()
-            $("#tan_video1")[0].play()
-        })
+       $(document).ready(function () {
+           $("#myModal")[0].style.display = 'none'; 
+            function hidebanner() {
+            $("#xkb_banner").removeClass("mobilecolmd8show")
+            }
+            $('#myModal').on('shown.bs.modal', function () {
+                $("#tan_video1").load()
+                $("#tan_video1")[0].play()
+            })
 
-        $('#myModal').on('hide.bs.modal', function () {
-            $("#tan_video1")[0].pause()
-        })
+            $('#myModal').on('hide.bs.modal', function () {
+                $("#tan_video1")[0].pause()
+            })
+       })
+       
 </script>
 </body>
 
