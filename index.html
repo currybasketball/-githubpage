@@ -11,6 +11,63 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <style type="text/css">
+        .xkb_text_title{
+            font-size: 20px;
+            padding: 30px 0 15px;
+            color: #000;
+        }
+        .xkb_text_title2{
+            font-size: 16px;
+            padding-bottom: 4%;
+            color: #92979e;
+        }
+        .img_top img{
+            width: 100%;
+        }
+        .text_bottom{
+            text-align: center;
+        }
+        .col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+         
+        @media ( min-width : 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+         
+        @media ( min-width : 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+         
+        @media ( min-width : 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+        }
+
+            .value_item:hover img{
+                transform: scale(1.1)!important;
+            }
+
+            .value_item:hover{
+                background: #009bee;
+                box-shadow: 1px 1px 1px 1px #fff;
+            }
+            .value_item:hover .text_bottom p{
+                color: #fff;
+            }
+    </style>
 </head>
 
 <body>
@@ -27,12 +84,12 @@
                             </a>
                             <div class="Mobilemenu"><i class="glyphicon glyphicon-menu-hamburger"></i></div>
                         </div>
-                        <div class="col-md-10  left mobilecolmd8 ">
+                        <div class="col-md-10  left mobilecolmd8 " id="xkb_banner">
                             <div class="row">
-                                <div class="col-md-2 col-md-push-2 module"><a href="#index">首页</a></div>
-                                <div class="col-md-2  col-md-push-2 module"><a href="#tech">产品与技术</a></div>
-                                <div class="col-md-2  col-md-push-2 module"><a href="#about">关于我们</a></div>
-                                <div class="col-md-2 col-md-push-2  module"><a href="#partner">合作伙伴</a></div>
+                                <div class="col-md-2 col-md-push-2 module" onclick="hidebanner()"><a href="#index">首页</a></div>
+                                <div class="col-md-2  col-md-push-2 module" onclick="hidebanner()"><a href="#tech">产品与技术</a></div>
+                                <div class="col-md-2  col-md-push-2 module" onclick="hidebanner()"><a href="#about">关于我们</a></div>
+                                <div class="col-md-2 col-md-push-2  module" onclick="hidebanner()"><a href="#partner">合作伙伴</a></div>
                             </div>
                         </div>
                     </div>
@@ -57,23 +114,57 @@
                 <div class="value">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 text-center title" >产品与技术</div>
+                            <div class="col-md-12 text-center title" style="padding-bottom: 2rem">产品与技术</div>
                             <div class="contentParent">
-                                <div class="col-md-6">
-                                    <div class="xkb-con">
-                                        <ul class="list-group">
-                                            <a class="list-group-item"><img src="images/2-1.png"><span>营销引流</span></a>
-                                            <a class="list-group-item"><img src="images/2-2.png"><span>智能保险顾问</span></a>
-                                            <a class="list-group-item"><img src="images/2-3.png"><span>人机交互投保</span></a>
-                                            <a class="list-group-item"><img src="images/2-4.png"><span>图像/语音/大数据风控</span></a>
-                                            <a class="list-group-item"><img src="images/2-5.png"><span>大数据建模</span></a>
-                                        </ul>
+                                <div class="col-md-5ths value_item">
+                                    <div class="img_top">
+                                        <img src="images/5.jpg" style="transform: scale(1);">
                                     </div>
+                                    <div class="text_bottom">
+                                        <p class="xkb_text_title">营销引流</p>
+                                        <p class="xkb_text_title2">营销引流介绍</p>
+                                    </div> 
                                 </div>
-                                <div class="col-md-6 text-center ">
-                                    <div class="xkb-con">
-                                        <img src="images/xkb2.png" style="width:220px;">
+
+                                <div class="col-md-5ths value_item">
+                                    <div class="img_top">
+                                        <img src="images/4.png" style="transform: scale(1);">
                                     </div>
+                                    <div class="text_bottom">
+                                        <p class="xkb_text_title">智能保险顾问</p>
+                                        <p class="xkb_text_title2">智能保险顾问介绍</p>
+                                    </div> 
+                                </div>
+
+                                
+                                <div class="col-md-5ths value_item"  data-toggle="modal" data-target="#myModal" >
+                                    <div class="img_top">
+                                        <img  src="images/3.jpg" style="transform: scale(1);">
+                                    </div>
+                                    <div class="text_bottom">
+                                        <p class="xkb_text_title">人机交互投保</p>
+                                        <p class="xkb_text_title2">人机交互投保介绍</p>
+                                    </div> 
+                                </div>
+
+                                <div class="col-md-5ths value_item">
+                                    <div class="img_top">
+                                        <img src="images/2.jpg" style="transform: scale(1);">
+                                    </div>
+                                    <div class="text_bottom">
+                                        <p class="xkb_text_title">图像/语音/大数据风控</p>
+                                        <p class="xkb_text_title2">图像/语音/大数据风控介绍</p>
+                                    </div> 
+                                </div>
+                                 
+                                <div class="col-md-5ths value_item">
+                                    <div class="img_top">
+                                        <img src="images/1.jpg" style="transform: scale(1);">
+                                    </div>
+                                    <div class="text_bottom">
+                                        <p class="xkb_text_title">大数据建模</p>
+                                        <p class="xkb_text_title2">大数据建模介绍</p>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -173,22 +264,20 @@
             <div class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5">
-                            <ul class="list-unstyled">
-                                <li class="picture"><img class="img-responsive" src="images/logo.png" style="display:none;"><span style="color: #8da9e5; font-weight: 900;">新开保</span></li>
-                                <li>
-                                    <p style="width:70%;" class="text-left">使用语音，图像，大数据专注改善保险行业痛点。</p>
-                                </li>
-                            </ul>
+                        <div class="col-md-3">
+                                    <p style="width:70%; font-family: STHupo;margin: 2rem auto" class="text-center" >科技让保险更简单</p>
                         </div>
-                        <div class="col-md-6 col-md-push-1">
+                        <div class="col-md-8 col-md-push-2">
                             <div class="row footerWrchat">
-                                <div class="col-md-4 col-xs-4">
+                                <div class="col-md-3 col-xs-6 col-md-push-2">
+                                    <img class="img-responsive wechat" src="images/xkb.jpg">
+                                </div>
+                                <div class="col-md-3 col-xs-6 col-md-push-1">
                                     <img class="img-responsive wechat" src="images/xkb-code.png">
                                 </div>
-                                <div class="col-md-8 col-xs-8 col-xs-pull-2 text-left">
+                                <div class="col-md-4 col-xs-12 text-left">
                                     <ul class="list-unstyled">
-                                        <li class="whchatText">邮箱：service@xkins.cn</li>
+                                        <li class="whchatText">邮箱: service@xkins.cn</li>
                                         <li class="whchatText">电话：010-88411800</li>
                                         <li class="whchatText">地址：北京市海淀区双清路一号院6号楼(北)三层323-5</li>
                                     </ul>
@@ -206,12 +295,38 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                
+            
+                <div class="modal-content">
+
+                <video controls="controls" name="media" id="tan_video1" style="display: block;" width="100%" height="100%" autoplay="autoplay">
+                    <source src="http://ou0863czj.bkt.clouddn.com/%E5%B0%8F%E5%BC%80%E6%9C%BA%E5%99%A8%E4%BA%BAdemo-7.17v3.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+        </div>
         <!-- scripts -->
         <script src="js/particles.js"></script>
         <script src="js/app.js"></script>
         <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
+       <script type="text/javascript">
+        function hidebanner() {
+        $("#xkb_banner").removeClass("mobilecolmd8show")
+        }
+        $('#myModal').on('shown.bs.modal', function () {
+            $("#tan_video1").load()
+            $("#tan_video1")[0].play()
+        })
+
+        $('#myModal').on('hide.bs.modal', function () {
+            $("#tan_video1")[0].pause()
+        })
+</script>
 </body>
 
 </html>
